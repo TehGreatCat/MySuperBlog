@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "base.html" %}
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+    <style>
+        div.panel{
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            max-height: 500px;
+            max-width: 500px;
+            min-height: 500px;
+            min-width: 500px;
+        }
+
+    </style>
+</head>
+<body>
+{% csrf_token %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for post in posts %}
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="panel panel-default">
+                    <img href="/home/post/{{ post.post_id }}" align="middle" height="500" width="500" class="panel-img-top" src={{ post.img }}>
+                    <div class="panel-block">
+                        <a href="/home/post/{{ post.post_id }}" class="panel-title" href="">{{ post.title }}</a>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ post.author }}</h6>
+                    </div>
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+</body>
+</html>

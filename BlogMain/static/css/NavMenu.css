@@ -1,0 +1,55 @@
+        body{
+            background-image: url("https://i.imgur.com/ltmWANZ.png");
+            height: 850px;
+            width: 1370px;
+        }
+
+        form {
+            color: white;
+        }
+
+        ul {
+            position: fixed;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #6b778d;
+        }
+
+        th {
+            color: #cbc9cf;
+        }
+
+        td {
+            color: wheat;
+        }
+
+        nav {
+            background-color: #6b778d;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #885ca9;
+            color: white;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .active {
+            background-color: #9205ff;
+            text-decoration: none;
+            color: white;
+        }

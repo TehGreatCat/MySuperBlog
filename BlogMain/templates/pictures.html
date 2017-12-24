@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "base.html" %}
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+    <style>
+        div.container{
+            position:fixed;
+            top: 50%;
+            left: 50%;
+            max-height: 50%;
+            max-width: 50%;
+            min-height: 50%;
+            min-width: 50%;
+        }
+        div.panel{
+            left: 50%;
+            max-width: 250px;
+            align-self: center;
+        }
+
+    </style>
+</head>
+<body>
+{% csrf_token %}
+
+<div class="row">
+    {% block content %}
+            {% for post in posts %}
+                <div class="container">
+                    <div class="card" style="width: 20rem">
+                        <img class="card-img-top" alt="Image" height="800" width="800" src={{ post.img }}>
+                        <div class="card-footer">
+                            <span class="label label-success">{{ post.timestamp }}</span>
+                        </div>
+                    </div>
+                </div>
+        {% endfor %}
+    {% endblock content %}
+</div>
+</body>
+</html>

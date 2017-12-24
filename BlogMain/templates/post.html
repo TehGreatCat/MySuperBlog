@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "base.html" %}
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+</head>
+<body>
+{% csrf_token %}
+{% block content %}
+    <div class="panel">
+                <div class="panel-heading">
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h3 class="pull-left">{{ post.title }}</h3>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4 class="pull-right">
+                                <small><em>{{ post.author }}</em></small>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="panel-body">
+                <img alt="Image" height="500" width="500" src={{ post.img }}>
+                <h2>
+                    {{ post.text }}
+                </h2>
+            </div>
+
+            <div class="panel-footer">
+                <span class="label label-default">{{ post.timestamp }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+</body>
+</html>

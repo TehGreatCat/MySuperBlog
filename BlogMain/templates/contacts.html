@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "base.html" %}
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+</head>
+<body>
+{% csrf_token %}
+{% block content %}
+<div class="container">
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="card" style="width: 300px; height: 450px">
+                        <img class="card-img-top" src="https://image.flaticon.com/icons/png/512/281/281769.png" alt="Card image cap" width="300" height="300" >
+                        <div class="card-block">
+                            <h4 class="card-title">Gmail</h4>
+                            <p class="card-text">Main: iPashok97@gmail.com</p>
+                            <p class="card-text">Additional: iMajesticCat@gmail.com</p>
+                            <a href="mailto:ipashok97@gmail.com" target="_blank" class="btn btn-primary">Write me</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card" style="width: 300px; height:450px;">
+                    <img class="card-img-top" src="https://seeklogo.com/images/T/twitter-2012-negative-logo-5C6C1F1521-seeklogo.com.png" alt="Card image cap" width="300" height="300">
+                        <div class="card-block">
+                            <h4 class="card-title">Twitter</h4>
+                            <p class="card-text">@Pashok97</p>
+                            <a href="https://twitter.com/Pashok97" target="_blank" class="btn btn-primary">Tweet @ me</a>
+                         </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card" style="width: 300px; height:450px;">
+                        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/500px-VK.com-logo.svg.png" alt="Card image cap" width="300" height="300">
+                        <div class="card-block">
+                            <h4 class="card-title">Vkontake</h4>
+                            <p class="card-text">Романов Павел</p>
+                            <p class="card-text">id - fordprefect</p>
+                            <a href="https://vk.com/fordprefect" target="_blank" class="btn btn-primary">My Account</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="card" style="width: 300px; height:450px;">
+                        <img class="card-img-top" src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="Card image cap" width="300" height="300">
+                        <div class="card-block">
+                            <h4 class="card-title">GitHub</h4>
+                            <p class="card-text">TehGreatCat</p>
+                            <a href="https://github.com/TehGreatCat" target="_blank" class="btn btn-primary">My Account</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="card" style="width: 300px; height:450px;">
+                        <img class="card-img-top" src="https://seeklogo.com/images/I/instagram-new-2016-logo-4773FE3F99-seeklogo.com.png" alt="Card image cap" width="300" height="300">
+                        <div class="card-block">
+                            <h4 class="card-title">Instagram</h4>
+                            <p class="card-text">@tvoy_cat</p>
+                            <a href="https://www.instagram.com/tvoy_cat" target="_blank" class="btn btn-primary">Check out my photos</a>
+                         </div>
+                    </div>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
+</body>
+</html>

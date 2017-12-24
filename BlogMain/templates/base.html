@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block css %}{% endblock %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+    <style>
+        body{
+            background-image: url("/media/modern_art_black_and_white-wallpaper-1920x1080.jpg");
+        }
+    </style>
+</head>
+<body>
+{% include 'header.html' %}
+{% block content %}
+{% endblock content %}
+{% include 'footer.html' %}
+
+</body>
+</html>

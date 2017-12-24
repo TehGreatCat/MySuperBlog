@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "base.html" %}
+    <meta charset="UTF-8">
+    <title>About</title>
+    {% load bootstrap3 %}
+    <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+    {% bootstrap_css %}
+</head>
+<body>
+{% csrf_token %}
+{% block content %}
+    <div class="panel">
+                <div class="panel-heading">
+                    <div class="text-center">
+                        <h1>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus dui lacus, a suscipit sem sollicitudin id.<br>
+                            Suspendisse a ligula porta, varius velit non, posuere tellus. Proin vitae rutrum mauris.<br>
+                            Ut sed vehicula ipsum. Etiam at justo luctus, tempus nisi in, ultricies est. Curabitur et felis metus. <br>
+                            Morbi sit amet ultricies mauris. Sed in sapien sed leo malesuada ullamcorper vitae quis neque.<br>
+                            Pellentesque leo massa, dignissim eget odio non, consequat elementum turpis. Donec feugiat justo justo,<br>
+                            non hendrerit tortor fringilla nec. Ut lacinia in lacus at malesuada. Cras hendrerit facilisis libero,<br>
+                            sed gravida risus volutpat ac. Curabitur ipsum tellus, viverra sit amet scelerisque id, tincidunt id metus.<br>
+                            <br>
+                            Phasellus erat augue, hendrerit id accumsan et, euismod sit amet sem. Sed nec ipsum a mauris faucibus vulputate.<br>
+                            Phasellus pellentesque ipsum non tincidunt interdum. Mauris dapibus purus ut volutpat varius. Maecenas tincidunt augue<br>
+                            id lacus tempus, et congue est aliquam. Nunc porta facilisis nibh ac ultricies. Integer condimentum pretium diam vel <br>
+                            pellentesque. Morbi ac risus a sem gravida sagittis. Cras egestas maximus gravida. Etiam mi ipsum,<br>
+                            lobortis vel nulla vel, ultrices rhoncus metus. Phasellus convallis, nunc id pellentesque mollis,<br>
+                            elit felis vehicula purus, vel laoreet libero lorem eget dolor. Vestibulum vitae iaculis metus, sed finibus nisl.<br>
+                        </h1>
+                    </div>
+                </div>
+    </div>
+{% endblock content %}
+</body>
+</html>
